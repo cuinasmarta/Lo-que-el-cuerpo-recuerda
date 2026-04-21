@@ -1,0 +1,432 @@
+<!--,MODIFICACIONES REALIZADAS:
+
+- Cambio completo de identidad visual (blanco/negro)
+- Sustitución de secciones (portfolio → obras)
+- Creación de sistema de obras con texto corto + modal
+- Personalización de navbar con logo interactivo
+- Nueva portada con jerarquía tipográfica
+- Inclusión de un apartado sobre mi
+- Adaptación de contacto a redes personales -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marta Cuiñas | Lo que el cuerpo recuerda</title>
+    <meta name="description" content="Portfolio artístico de Marta Cuiñas" />
+
+    <!-- CAMBIO: uso Bootstrap desde CDN para asegurar que la base funcione -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
+    <!-- CAMBIO: CSS propio -->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+    <!-- =========================================================
+         NAVBAR
+         CAMBIO: barra Bootstrap modificada con logo + título
+         ========================================================= -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar" id="mainNav">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center gap-3" href="#page-top">
+                <!-- CAMBIO: logo -->
+                <img src="assets/img/logo.png" alt="Logo proyecto" class="nav-logo" />
+                <span class="brand-title">Lo que el cuerpo recuerda</span>
+            </a>
+
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Abrir navegación">
+                Menú
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#obras">Obras</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobremi">Sobre mi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =========================================================
+         PORTADA / MASTHEAD
+         CAMBIO: portada personalizada con nombre grande
+         ========================================================= -->
+    <header class="masthead-section" id="inicio">
+        <div class="container">
+            <div class="row align-items-end g-5">
+
+                <!-- TEXTO PORTADA -->
+                <div class="col-lg-7">
+                    <div class="hero-text">
+                        <p class="hero-mini">Proyecto artístico</p>
+
+                        <h1 class="hero-name">
+                            MARTA<br />
+                            CUIÑAS
+                        </h1>
+
+                        <p class="hero-project">Lo que el cuerpo recuerda</p>
+
+                        <p class="hero-description">
+                            Donde lo invisible que habita el cuerpo encuentra forma.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- IMAGEN PORTADA -->
+                <div class="col-lg-5">
+                    <div class="hero-image-wrapper">
+                        <!-- CAMBIO: imagen principal real -->
+                        <img src="assets/img/flor.png" alt="Imagen principal del proyecto" class="hero-image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAMBIO: texto cinético -->
+        <div class="kinetic-band">
+            <div class="kinetic-track">
+                <span>PRESENCIA CUERPO Y EMOCIÓN — SENTIR — </span>
+                <span>PRESENCIA CUERPO Y EMOCIÓN — SENTIR — </span>
+                <span>PRESENCIA CUERPO Y EMOCIÓN — SENTIR — </span>
+                <span>PRESENCIA CUERPO Y EMOCIÓN — SENTIR — </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- OBRAS -->
+    <section class="page-section custom-section" id="obras">
+        <div class="container">
+            <div class="section-top">
+                <p class="section-number">01</p>
+                <h2 class="section-title">Obras</h2>
+            </div>
+
+            <div class="row g-5">
+
+                <!-- OBRA 1 -->
+                <div class="col-md-6">
+                    <article class="work-card">
+                        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#obraModal1">
+                            <div class="work-overlay">
+                                <span>Leer más</span>
+                            </div>
+                            <img src="assets/img/escenario.jpg" alt="Escenario" class="work-image" />
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">ESCENARIO</h3>
+                            <p class="work-text"> Esta obra plantea el cuerpo como escena y como espacio de desdoblamiento.
+                        La imagen introduce una relación entre arquitectura, sombra, memoria y presencia.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- OBRA 2 -->
+                <div class="col-md-6">
+                    <article class="work-card">
+                        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#obraModal2">
+                            <div class="work-overlay">
+                                <span>Leer más</span>
+                            </div>
+                            <img src="assets/img/mirada.jpg" alt="Mirada" class="work-image" />
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">MIRADA</h3>
+                            <p class="work-text">
+                                El rostro aparece atravesado por luz y sombra, como si la identidad
+                                estuviera construida desde capas inestables.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- OBRA 3 -->
+                <div class="col-md-6">
+                    <article class="work-card">
+                        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#obraModal3">
+                            <div class="work-overlay">
+                                <span>Leer más</span>
+                            </div>
+                            <img src="assets/img/cuerpoymateria.jpg" alt="Cuerpo y materia" class="work-image" />
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">CUERPO Y MATERIA</h3>
+                            <p class="work-text">
+                                Investigación sobre el cuerpo como materia sensible y sobre la relación
+                                entre palabra, peso, presencia y desaparición.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- OBRA 4 -->
+                <div class="col-md-6">
+                    <article class="work-card">
+                        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#obraModal4">
+                            <div class="work-overlay">
+                                <span>Leer más</span>
+                            </div>
+                            <img src="assets/img/dentrodelsilencio.jpg" alt="Dentro del silencio" class="work-image" />
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">DENTRO DEL SILENCIO</h3>
+                            <p class="work-text">
+                                Pieza centrada en la contención, el aislamiento y el cuerpo como lugar
+                                donde la experiencia queda suspendida.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- OBRA 5 -->
+                <div class="col-md-6">
+                    <article class="work-card">
+                        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#obraModal5">
+                            <div class="work-overlay">
+                                <span>Leer más</span>
+                            </div>
+                            <img src="assets/img/entendiendoelsentir.jpg" alt="Entendiendo el sentir" class="work-image" />
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">ENTENDIENDO EL SENTIR</h3>
+                            <p class="work-text">
+                                Texto, rostro y proyección se mezclan para pensar lo sensible como algo
+                                que no se puede separar del cuerpo.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- OBRA 6 -->
+                <div class="col-md-6">
+                    <article class="work-card">
+                        <div class="portfolio-item" data-bs-toggle="modal" data-bs-target="#obraModal6">
+                            <div class="work-overlay">
+                                <span>Leer más</span>
+                            </div>
+                            <img src="assets/img/aflordepiel.jpg" alt="A flor de piel" class="work-image" />
+                        </div>
+                        <div class="work-info">
+                            <h3 class="work-title">A FLOR DE PIEL</h3>
+                            <p class="work-text">
+                                El cuerpo aparece envuelto en una imagen orgánica y sensible, como una
+                                superficie donde todo queda inscrito.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         SOBRE MI
+         ========================================================= -->
+    <section class="page-section custom-section" id="sobremi">
+        <div class="container">
+            <div class="section-top">
+                <p class="section-number">02</p>
+                <h2 class="section-title">Sobre mi</h2>
+            </div>
+
+            <div class="row justify-content-end">
+                <div class="col-lg-9">
+                    <div class="sobremi-box">
+                        <p>
+                           <strong>¿Cómo se puede mostrar una emoción cuando ya no sabemos como exlicarla con palabras?</strong>Me interesa trabajar ese límite donde lo que sentimos empieza a tomar forma en el cuerpo: en la luz, en el color, en la proyeccion o en la imagen. Mi intención es conseguir ue el espectador mo solo vea una obra, sino que sienta que está entrando en u espacio emocionel que quizá reconoce o que le resulta familiar.
+                        </p>
+                        <p>
+                           Trabajo desde el <strong> cuerpo como lugar de experiencia y memoria emocional </strong>, explorando el equilibrio entre vulnerabilidad y fuerza. A través de distintos medios, busco dar presencia a estados emocionales que suelen permanecer ocultos, construyendo imágenes donde una figura central dialoga con el espacio y con una atmósfera que amplifica lo que es <strong>sentir</strong>.
+                        </p>
+
+                        <p class="mb-0">
+                          Parto de lo personal, pero no desde lo anecdótico, sino desde la intención de transformar la experiencia individual en algo universal. Me interesa la huella emocional que dejan las relaciones, el amor, la ausencia y el recuerdo. Formalmente, trabajo con contrastes —presencia y vacío, luz y sombra— buscando que la imagen respire y deje espacio para que la emoción se expanda. Cada obra es, en esencia, un intento de comprender lo que significa sentir y de hacer visible esa experiencia compartida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACTO
+         ========================================================= -->
+    <section class="page-section custom-section pb-5" id="contacto">
+        <div class="container">
+            <div class="section-top">
+                <p class="section-number">03</p>
+                <h2 class="section-title">Contacto</h2>
+            </div>
+
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-6">
+                    <p class="contact-text mb-0">
+                        Puedes encontrarme o escribirme aquí.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+    <div class="contact-links">
+        <a href="https://www.instagram.com/cuinasm.art/" class="contact-link" target="_blank">Instagram</a>
+        <a href="mailto:cuinasmartinmarta@gmail.com" class="contact-link">Email</a>
+        <a href="assets/pdf/portfolio_cuinas_marta.pdf" class="contact-link" download> Descargar Portfolio</a>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <p class="mb-0">© 2026 Marta Cuiñas — Lo que el cuerpo recuerda</p>
+        </div>
+    </footer>
+
+    <!-- =========================================================
+         MODALES
+         ========================================================= -->
+
+    <!-- MODAL 1 -->
+    <div class="modal fade" id="obraModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <h2 class="modal-title-custom">ESCENARIO INTERIOR</h2>
+                    <img src="assets/img/escenarios.jpg" alt="Escenario interior ampliado" class="modal-work-image" />
+                    <p class="modal-work-text">  En Escenario el cuerpo se transforma en un lugar donde algo sucede. No representa una emoción concreta, sino que se convierte en el espacio donde esa emoción tiene lugar. La proyección construye una atmósfera que envuelve la figura y la sitúa dentro de una especie de ficción íntima.
+                        <br><br>
+                        El cuerpo ya no es únicamente soporte; es escenario activo. La luz cae sobre él como si lo señalara, como si lo expusiera a una mirada externa. Sin embargo, no hay público visible. La tensión surge precisamente de esa contradicción: el cuerpo parece estar siendo observado, pero permanece solo.
+                        <br><br>
+                        La obra plantea que cada emoción que vivimos deja una escena inscrita en nosotros. El cuerpo guarda esos momentos como un teatro interior donde se repiten, se transforman y se reinterpretan. Aquí, la proyección no ilustra una historia; crea un espacio donde el sentimiento puede manifestarse sin necesidad de palabras. El escenario no está fuera: está en la piel.
+                            </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2 -->
+    <div class="modal fade" id="obraModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <h2 class="modal-title-custom">MIRADA</h2>
+                    <img src="assets/img/mirada.jpg" alt="Mirada ampliada" class="modal-work-image" />
+                    <p class="modal-work-text">
+                        El rostro aparece atravesado por proyección y oscuridad. Me interesa cómo la mirada
+                        se convierte en un lugar de inestabilidad, de aparición y de ocultamiento.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3 -->
+    <div class="modal fade" id="obraModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <h2 class="modal-title-custom">CUERPO Y MATERIA</h2>
+                    <img src="assets/img/cuerpoymateria.jpg" alt="Cuerpo y materia ampliado" class="modal-work-image" />
+                    <p class="modal-work-text">
+                        En esta pieza el cuerpo se vincula con la palabra, con la materia y con lo invisible,
+                        construyendo una imagen donde sentir y existir quedan unidos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 4 -->
+    <div class="modal fade" id="obraModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <h2 class="modal-title-custom">DENTRO DEL SILENCIO</h2>
+                    <img src="assets/img/dentrodelsilencio.jpg" alt="Dentro del silencio ampliado" class="modal-work-image" />
+                    <p class="modal-work-text">
+                        La imagen trabaja la contención, la fragilidad y la suspensión, entendiendo el silencio
+                        como un espacio interno en el que el cuerpo permanece.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 5 -->
+    <div class="modal fade" id="obraModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <h2 class="modal-title-custom">ENTENDIENDO EL SENTIR</h2>
+                    <img src="assets/img/entendiendoelsentir.jpg" alt="Entendiendo el sentir ampliado" class="modal-work-image" />
+                    <p class="modal-work-text">
+                        Texto y rostro se superponen para pensar el sentir como una forma de conocimiento corporal,
+                        íntima y difícil de separar de la experiencia vivida.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 6 -->
+    <div class="modal fade" id="obraModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content custom-modal">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pb-5">
+                    <h2 class="modal-title-custom">A FLOR DE PIEL</h2>
+                    <img src="assets/img/aflordepiel.jpg" alt="A flor de piel ampliado" class="modal-work-image" />
+                    <p class="modal-work-text">
+                        Esta obra se acerca al cuerpo como superficie abierta, vulnerable y sensible,
+                        donde la imagen se vuelve casi orgánica.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>
